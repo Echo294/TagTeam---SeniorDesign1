@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | TagTeam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>TAGTEAM</h1>
+        <p>Create Your Player Account</p>
+    </header>
+
+    <main>
+        <section class="register-container">
+            <h2>Join TagTeam</h2>
+            <p>Create an account to save your progress
+               and access the player shop.</p>
+
+            <form id="registerForm">
+
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="At least 8 characters"
+                    minlength="8"
+                    autocomplete="new-password"
+                    required
+                >
+
+                <button type="submit">
+                    Create Account
+                </button>
+            </form>
+
+            <!-- Registration success/error message -->
+            <p
+                id="message"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+            <p>
+                Already have an account?
+                <a href="login.html">Log In</a>
+            </p>
+
+            <p>
+                <a href="index.html">Back to Home</a>
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

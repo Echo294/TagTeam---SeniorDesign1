@@ -1,151 +1,47 @@
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #111;
+    margin: 0;
+    min-height: 100vh;
+    background: #111827;
     color: white;
+    font-family: Arial, sans-serif;
     text-align: center;
 }
 
 header {
     padding: 25px;
-    background: #1c1c1c;
+    background: #1f2937;
 }
 
 header h1 {
-    font-size: 40px;
-    letter-spacing: 5px;
+    margin: 0;
+    color: #60a5fa;
 }
 
-header p {
-    margin-top: 8px;
-    color: #aaa;
+main {
+    padding: 80px 20px;
 }
 
-.game-area {
-    position: relative;
-    width: 900px;
-    height: 500px;
-
-    margin: 40px auto;
-
-    background: #222;
-    border: 3px solid #555;
-
-    overflow: hidden;
-}
-
-.character {
-    position: absolute;
-
-    width: 40px;
-    height: 50px;
-
+.buttons {
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    font-weight: bold;
-
-    border-radius: 6px;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
 }
 
-#player1 {
-    left: 100px;
-    bottom: 100px;
-    background: #3498db;
-}
-
-#player2 {
-    left: 160px;
-    bottom: 100px;
-    background: #e74c3c;
-}
-
-.platform {
-    position: absolute;
-
-    height: 20px;
-
-    background: #777;
-
-    border-radius: 5px;
-}
-
-.platform-1 {
-    width: 900px;
-    bottom: 50px;
-    left: 0;
-}
-
-.platform-2 {
-    width: 250px;
-    bottom: 180px;
-    left: 300px;
-}
-
-.platform-3 {
-    width: 200px;
-    bottom: 300px;
-    left: 600px;
-}
-
-#goal {
-    position: absolute;
-
-    right: 40px;
-    bottom: 70px;
-
-    padding: 15px;
-
-    background: #2ecc71;
-
-    border-radius: 5px;
-
-    font-weight: bold;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-
-    margin-bottom: 30px;
-}
-
-.controls h2 {
-    margin-bottom: 10px;
-}
-
-.controls p {
-    color: #aaa;
-    margin: 5px;
-}
-
-.game-status {
-    margin-bottom: 40px;
-}
-
-#status {
-    margin-bottom: 15px;
-}
-
-button {
-    padding: 10px 20px;
-
-    background: #444;
+.buttons a {
+    padding: 14px 25px;
+    background: #2563eb;
     color: white;
-
-    border: none;
-    border-radius: 5px;
-
-    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
 }
 
-button:hover {
-    background: #666;
+.buttons a:hover {
+    background: #1d4ed8;
 }
