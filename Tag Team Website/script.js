@@ -103,3 +103,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loginForm = document.getElementById("loginForm");
+
+    if (!loginForm) return;
+
+    loginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const message = document.getElementById("message");
+        const button = loginForm.querySelector('button[type="submit"]');
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+
+        button.disabled = true;
+        message.textContent = "Logging in...";
+        message.style.color = "white";
+
+        try {
+            const response = await fetch("/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                message.textContent =
+                    `Welcome back, ${result.username}!`;
+
+                message.style.color = "#4ade80";
+
+                loginForm.reset();
+
+            } else {
+                message.textContent =
+                    result.error || "Login failed.";
+
+                message.style.color = "#f87171";
+            }
+
+        } catch (error) {
+            console.error("Login error:", error);
+
+            message.textContent =
+                "Could not connect to the server.";
+
+            message.style.color = "#f87171";
+
+        } finally {
+            button.disabled = false;
+        }
+    });
+});
