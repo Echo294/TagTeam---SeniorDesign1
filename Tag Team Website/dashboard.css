@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+body.dashboard-page {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(
+        ellipse at top,
+        #1b2b4b 0%,
+        #0b1020 65%
+    );
+    color: #f4f7ff;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 7%;
+    background: rgba(12, 18, 33, 0.9);
+    border-bottom: 1px solid #293752;
+}
+
+.brand {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #9caec9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #60a5fa;
+}
+
+.dashboard-main {
+    width: min(1050px, 90%);
+    margin: 60px auto;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.welcome-section h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 10px 0;
+}
+
+.welcome-section p {
+    color: #9caec9;
+}
+
+.profile-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.balances {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.balance-card {
+    padding: 28px;
+    border-radius: 15px;
+    background: #17233a;
+    border: 1px solid #30405f;
+}
+
+.balance-heading {
+    display: flex;
+    justify-content: space-between;
+    color: #b6c4da;
+}
+
+.currency-icon {
+    font-size: 27px;
+}
+
+.gold-card .currency-icon {
+    color: #facc15;
+}
+
+.diamond-card .currency-icon {
+    color: #67e8f9;
+}
+
+.balance-card h2 {
+    font-size: 40px;
+    margin: 18px 0 8px;
+}
+
+.balance-card p {
+    color: #8295b3;
+    font-size: 13px;
+}
+
+.store-section {
+    margin-top: 25px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: linear-gradient(110deg, #1d315b, #25214c);
+    border: 1px solid #46538b;
+    border-radius: 15px;
+}
+
+.store-icon {
+    font-size: 40px;
+    color: #67e8f9;
+}
+
+.store-info {
+    flex: 1;
+}
+
+.store-info h2 {
+    margin: 0 0 8px;
+}
+
+.store-info p {
+    color: #b4c0dc;
+    margin: 0;
+}
+
+.store-button {
+    padding: 14px 22px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.store-button:hover {
+    background: #3b82f6;
+}
+
+.account-section {
+    margin-top: 25px;
+    padding: 28px;
+    background: #17233a;
+    border: 1px solid #30405f;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.account-section h2 {
+    margin: 0 0 8px;
+}
+
+.account-section p {
+    margin: 0;
+    color: #9caec9;
+}
+
+#logoutButton {
+    background: transparent;
+    color: #fca5a5;
+    border: 1px solid #a34b59;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#logoutButton:hover {
+    background: #542a3a;
+}
+
+#message {
+    margin-top: 20px;
+    color: #fca5a5;
+}
+
+@media (max-width: 650px) {
+    .dashboard-nav {
+        padding: 20px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-main {
+        margin: 35px auto;
+    }
+
+    .balances {
+        grid-template-columns: 1fr;
+    }
+
+    .store-section,
+    .account-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .store-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        display: none;
+    }
+}

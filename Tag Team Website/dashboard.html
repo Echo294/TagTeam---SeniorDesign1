@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | TagTeam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-page">
+
+    <nav class="dashboard-nav">
+        <a href="index.html" class="brand">TAG<span>TEAM</span></a>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">My Account</a>
+            <a href="shop.html">Buy Diamonds</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">PLAYER ACCOUNT</p>
+                <h1>Welcome back, <span id="playerUsername">Player</span>!</h1>
+                <p>Manage your TagTeam profile and currency.</p>
+            </div>
+            <div class="profile-avatar">TT</div>
+        </section>
+
+        <section class="balances">
+            <div class="balance-card gold-card">
+                <div class="balance-heading">
+                    <span>Gold Balance</span>
+                    <span class="currency-icon">●</span>
+                </div>
+                <h2 id="playerGold">0</h2>
+                <p>Earned through gameplay</p>
+            </div>
+
+            <div class="balance-card diamond-card">
+                <div class="balance-heading">
+                    <span>Diamond Balance</span>
+                    <span class="currency-icon">◆</span>
+                </div>
+                <h2 id="playerPremium">0</h2>
+                <p>Premium currency</p>
+            </div>
+        </section>
+
+        <section class="store-section">
+            <div class="store-icon">◆</div>
+            <div class="store-info">
+                <h2>Need More Diamonds?</h2>
+                <p>Purchase diamonds to unlock cosmetics in the TagTeam game.</p>
+            </div>
+            <a href="shop.html" class="store-button">Buy Diamonds</a>
+        </section>
+
+        <section class="account-section">
+            <div>
+                <h2>Account Settings</h2>
+                <p>More account customization features coming soon.</p>
+            </div>
+            <button id="logoutButton" type="button">Log Out</button>
+        </section>
+
+        <p id="message" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
