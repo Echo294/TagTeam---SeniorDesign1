@@ -49,6 +49,7 @@ namespace GMTK.PlatformerToolkit {
             //The value will read -1 when pressing left, 0 when idle, and 1 when pressing right.
 
             if (movementLimiter.instance.CharacterCanMove) {
+                //Add if player 1 or 2. How to determine different movement?
                 directionX = context.ReadValue<float>();
             }
         }
