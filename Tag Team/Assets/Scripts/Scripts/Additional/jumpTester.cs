@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace GMTK.PlatformerToolkit {
     public class jumpTester : MonoBehaviour {
-        [SerializeField] Unity.Cinemachine.CinemachineVirtualCamera theCamera;
+        [SerializeField] Unity.Cinemachine.CinemachineCamera theCamera;
 
 
 
