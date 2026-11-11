@@ -1,0 +1,231 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(
+        ellipse at top,
+        #1b2b4b 0%,
+        #0b1020 65%
+    );
+    color: #f4f7ff;
+}
+
+.shop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: rgba(12, 18, 33, 0.9);
+    border-bottom: 1px solid #293752;
+}
+
+.brand {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.brand span {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #9caec9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #60a5fa;
+}
+
+.shop-main {
+    width: min(1150px, 90%);
+    margin: 60px auto;
+}
+
+.shop-header {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.eyebrow {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.shop-header h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 15px 0;
+}
+
+.shop-header > p:not(.eyebrow) {
+    color: #a5b4ce;
+}
+
+.wallet {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+    padding: 20px 30px;
+    background: #17233a;
+    border: 1px solid #344766;
+    border-radius: 12px;
+}
+
+.wallet > span {
+    color: #a5b4ce;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.wallet strong {
+    font-size: 25px;
+}
+
+.diamond-symbol,
+.package-icon {
+    color: #67e8f9;
+}
+
+.packages h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.package-card {
+    position: relative;
+    text-align: center;
+    padding: 35px 20px;
+    background: #17233a;
+    border: 1px solid #30405f;
+    border-radius: 15px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    border-color: #60a5fa;
+}
+
+.package-card.featured {
+    border: 2px solid #60a5fa;
+    background: linear-gradient(160deg, #203866, #17233a);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 18px;
+    background: #2563eb;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.package-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.package-card h3 {
+    margin: 10px 0;
+}
+
+.diamond-amount {
+    font-size: 36px;
+    font-weight: bold;
+    color: #67e8f9;
+}
+
+.package-card p {
+    color: #a5b4ce;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.package-card button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #334155;
+    color: #a5b4ce;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.shop-footer {
+    text-align: center;
+    margin: 65px auto 0;
+    max-width: 650px;
+    padding: 25px;
+    border: 1px solid #30405f;
+    border-radius: 15px;
+    background: #17233a;
+}
+
+.shop-footer p {
+    color: #a5b4ce;
+    line-height: 1.6;
+}
+
+#shopMessage {
+    text-align: center;
+    margin-top: 20px;
+    color: #fca5a5;
+}
+
+@media (max-width: 950px) {
+    .package-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .shop-nav {
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wallet {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .shop-main {
+        margin: 35px auto;
+    }
+}

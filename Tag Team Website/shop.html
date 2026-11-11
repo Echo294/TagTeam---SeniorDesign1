@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Diamonds | TagTeam</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+    <nav class="shop-nav">
+        <a href="index.html" class="brand">TAG<span>TEAM</span></a>
+
+        <div class="nav-links">
+            <a href="dashboard.html">My Account</a>
+            <a href="shop.html" class="active">Buy Diamonds</a>
+        </div>
+    </nav>
+
+    <main class="shop-main">
+
+        <section class="shop-header">
+            <p class="eyebrow">TAGTEAM PREMIUM STORE</p>
+            <h1>Power Up Your Style.</h1>
+            <p>
+                Purchase diamonds to unlock exclusive
+                cosmetics in the TagTeam game.
+            </p>
+
+            <div class="wallet">
+                <span>YOUR DIAMOND BALANCE</span>
+                <strong>
+                    <span class="diamond-symbol">◆</span>
+                    <span id="diamondBalance">Loading...</span>
+                </strong>
+            </div>
+        </section>
+
+        <section class="packages">
+            <h2>Choose Your Diamond Package</h2>
+
+            <div class="package-grid">
+
+                <article class="package-card">
+                    <div class="package-icon">◆</div>
+                    <h3>Starter Pack</h3>
+                    <div class="diamond-amount">100</div>
+                    <p>Diamonds</p>
+                    <div class="price">$0.99</div>
+                    <button type="button" disabled>
+                        Coming Soon
+                    </button>
+                </article>
+
+                <article class="package-card">
+                    <div class="package-icon">◆</div>
+                    <h3>Standard Pack</h3>
+                    <div class="diamond-amount">550</div>
+                    <p>Diamonds</p>
+                    <div class="price">$4.99</div>
+                    <button type="button" disabled>
+                        Coming Soon
+                    </button>
+                </article>
+
+                <article class="package-card featured">
+                    <div class="popular-tag">POPULAR</div>
+                    <div class="package-icon">◆</div>
+                    <h3>Premium Pack</h3>
+                    <div class="diamond-amount">1,200</div>
+                    <p>Diamonds</p>
+                    <div class="price">$9.99</div>
+                    <button type="button" disabled>
+                        Coming Soon
+                    </button>
+                </article>
+
+                <article class="package-card">
+                    <div class="package-icon">◆</div>
+                    <h3>Ultimate Pack</h3>
+                    <div class="diamond-amount">2,500</div>
+                    <p>Diamonds</p>
+                    <div class="price">$19.99</div>
+                    <button type="button" disabled>
+                        Coming Soon
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="shop-footer">
+            <h2>How Diamonds Work</h2>
+            <p>
+                Diamonds are TagTeam's premium currency.
+                Use them in the game's cosmetic shop to
+                customize your characters.
+            </p>
+            <p>
+                Diamond purchases will be available
+                once secure checkout is enabled.
+            </p>
+        </section>
+
+        <p id="shopMessage" role="status" aria-live="polite"></p>
+
+    </main>
+
+    <script src="shop.js"></script>
+</body>
+</html>
